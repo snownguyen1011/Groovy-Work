@@ -1,9 +1,6 @@
 
-def file = new File("./inputfile1.properties")
-line = 'speciality-order'
 
-println(file.find(line))
-
-
-def file1 = readFile("./inputfile1.properties")
-file.get
+def file1 = readProperties("${WORKSPACE}/inputfile1.properties")  // Converts as a String
+println(file1.getClass())  // file1 is a string
+def inputlist = []
+println(file1.tokenize("="))
