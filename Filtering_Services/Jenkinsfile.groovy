@@ -8,7 +8,7 @@ pipeline {
     //string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     //}
     stages {
-        stage('\u2756 \u2780 Filter_Services \u2744') {
+        stage('\u2756 \u2780 \u26F3 \u2600 Filter_Services \u2744') {
             steps {
                 step([$class: 'WsCleanup'])
                 script {
@@ -47,10 +47,10 @@ pipeline {
                                 validSchedulers.add(item)
                             }
                             else{
-                                println("${item} not found on valid scheduler-list")
+                                println("\u261E ${item} not found on valid scheduler-list \u2639")
                             }
                         }
-                        println("Valid Schedulers:\n ${validSchedulers}")
+                        println("\u2611 Valid Schedulers:\n ${validSchedulers}")
                         def VALID_SERVICES_ALL = readProperties file:"${file1}"
                         VALID_SERVICES_ALL.each{ key,value ->
                             if(validSchedulers.contains(key)){
