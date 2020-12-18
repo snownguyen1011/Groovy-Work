@@ -8,7 +8,7 @@ pipeline {
     //string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     //}
     stages {
-        stage('\u2756 U+2780 Filter_Services U+2744') {
+        stage('\u2756 \u2780 Filter_Services \u2744') {
             steps {
                 step([$class: 'WsCleanup'])
                 script {
