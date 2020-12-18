@@ -8,7 +8,7 @@ pipeline {
     //string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     //}
     stages {
-        stage('Filter_Services') {
+        stage('\u2756 Filter_Services') {
             steps {
                 step([$class: 'WsCleanup'])
                 script {
@@ -40,8 +40,8 @@ pipeline {
                                 file2.append(key+"="+value+"\n")
                             }
                         }
-                        println("Valid Services:\n ${validServices}")
-                        println("InValid Services:\n ${invalidServices}")
+                        println("\u2713 Valid Services:\n ${validServices}")
+                        println("\u2717 InValid Services:\n ${invalidServices}")
                         validServices.each{ item ->
                             if(schedulersFile.containsKey(item)){
                                 validSchedulers.add(item)
